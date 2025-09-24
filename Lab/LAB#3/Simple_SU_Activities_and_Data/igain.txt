@@ -1,0 +1,6 @@
+  *** INTERACTIVE GAIN TEST ***
+Input file = oz14h4.su   perc = 95
+key = offset   min value = 800   max value = 
+ -> Original data
+ -> Gain function is: A'=A*t^2
+ ***  Output data file: igain.su

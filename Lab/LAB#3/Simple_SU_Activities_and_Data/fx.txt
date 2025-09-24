@@ -1,0 +1,9 @@
+                     Frequency Filter Test
+                     ---------------------
+sugain < oz8w.su tpow=2
+ ==> First test
+          Frequencies: 16,18,25,30
+sufilter < oz8w.su dx=25 dt=0.004 \
+            freqs=  amps=
+  Passed data are in  ==>  fxpass.su
+Rejected data are in  ==>  fxrejj.su
