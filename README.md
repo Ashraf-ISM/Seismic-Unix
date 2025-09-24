@@ -153,20 +153,16 @@ This repository provides a **comprehensive solution** for installing and working
    cd Seismic-Unix
    ```
 
-2. **Navigate to the installation files directory:**
-   ```bash
-   cd installation_file
-   ```
+2. **Navigate to the Direct installation files directory:**
+   
 
-3. **Download the pre-built installation files:**
+
+3. **Follow the link and Download the pre-built installation files:**
    - Look for the zip file containing the compiled Seismic Unix binaries
    - Download and extract the zip file to your desired location
 
 4. **Extract the installation files:**
-   ```bash
-   # Replace 'seismic_unix_prebuilt.zip' with the actual filename
-   unzip seismic_unix_prebuilt.zip -d ~/SeismicUnix
-   ```
+   
 
 5. **Set up environment variables:**
    ```bash
