@@ -1,0 +1,6 @@
+# Depth (km)  Vp (km/s)  Density (g/cc)
+0.00  1.50  1.00  # Water layer (Vp = 1.5 km/s, density = 1.0 g/cc)
+2.00  1.65  1.40  # Layer 2 (Vp = 1.65 km/s, density = 1.4 g/cc)
+2.16  1.75  1.60  # Layer 3 (Vp = 1.75 km/s, density = 1.6 g/cc)
+2.21  1.80  0.83  # Layer 4 (Vp = 1.8 km/s, density = 0.83 g/cc)
+2.25  1.55  0.70  # Layer 5 (Vp = 1.55 km/s, density = 0.7 g/cc)

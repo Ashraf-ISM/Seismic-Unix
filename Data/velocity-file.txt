@@ -1,0 +1,8 @@
+# Depth (m)    Vp (km/s)    Density (g/cc)
+0              1.5          1.0  # Surface (assumed)
+2000           1.5          1.0  # Water layer
+2160           1.65         1.4  # Layer 2
+2210           1.75         1.6  # Layer 3
+2250           1.8          0.83 # Layer 4
+2310           1.55         0.7  # Layer 5
+
