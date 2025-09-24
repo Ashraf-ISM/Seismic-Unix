@@ -23,8 +23,9 @@
   - [✨ Features](#-features)
   - [🔧 System Requirements](#-system-requirements)
   - [📥 Installation](#-installation)
-    - [🔄 Automatic Installation (Recommended)](#-automatic-installation-recommended)
-    - [⚙️ Manual Installation](#️-manual-installation)
+    - [🔄 Method 1: Automatic Installation (Recommended)](#-method-1-automatic-installation-recommended)
+    - [📦 Method 2: Download Pre-built Installation Files](#-method-2-download-pre-built-installation-files)
+    - [⚙️ Method 3: Manual Installation](#️-method-3-manual-installation)
   - [🚀 Quick Start](#-quick-start)
   - [📚 Lab Assignments](#-lab-assignments)
   - [🗂️ Repository Structure](#️-repository-structure)
@@ -114,22 +115,22 @@ This repository provides a **comprehensive solution** for installing and working
 
 ## 📥 Installation
 
-### 🔄 Automatic Installation (Recommended)
+### 🔄 Method 1: Automatic Installation (Recommended)
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/seismic-unix-lab.git
-   cd seismic-unix-lab
+   git clone https://github.com/Ashraf-ISM/Seismic-Unix.git
+   cd Seismic-Unix
    ```
 
 2. **Make the script executable:**
    ```bash
-   chmod +x install_seismic_unix.sh
+   chmod +x su_installation_script.sh
    ```
 
 3. **Run the installation:**
    ```bash
-   ./install_seismic_unix.sh
+   ./su_installation_script.sh
    ```
 
 4. **Follow the interactive prompts:**
@@ -142,7 +143,49 @@ This repository provides a **comprehensive solution** for installing and working
    source ~/.bashrc  # or ~/.zshrc for zsh users
    ```
 
-### ⚙️ Manual Installation
+### 📦 Method 2: Download Pre-built Installation Files
+
+> **⚠️ If the installation script is not working**, use this alternative method:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ashraf-ISM/Seismic-Unix.git
+   cd Seismic-Unix
+   ```
+
+2. **Navigate to the installation files directory:**
+   ```bash
+   cd installation_file
+   ```
+
+3. **Download the pre-built installation files:**
+   - Look for the zip file containing the compiled Seismic Unix binaries
+   - Download and extract the zip file to your desired location
+
+4. **Extract the installation files:**
+   ```bash
+   # Replace 'seismic_unix_prebuilt.zip' with the actual filename
+   unzip seismic_unix_prebuilt.zip -d ~/SeismicUnix
+   ```
+
+5. **Set up environment variables:**
+   ```bash
+   export CWPROOT="$HOME/SeismicUnix"
+   export PATH="$PATH:$CWPROOT/bin"
+   
+   # Make permanent by adding to shell configuration
+   echo "export CWPROOT='$HOME/SeismicUnix'" >> ~/.bashrc
+   echo 'export PATH="$PATH:$CWPROOT/bin"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+6. **Test the installation:**
+   ```bash
+   # Test if Seismic Unix is working
+   suplane | suximage title="Installation Test" &
+   ```
+
+### ⚙️ Method 3: Manual Installation
 
 <details>
 <summary>🔧 Click for manual installation steps</summary>
@@ -215,16 +258,16 @@ This repository includes a comprehensive set of lab assignments covering essenti
 
 | Lab # | Topic | Description | Difficulty |
 |-------|-------|-------------|------------|
-| 📊 **Lab 01** | [Data Import & Visualization](labs/lab01/) | Loading SEG-Y data and basic visualization | 🟢 Beginner |
-| 🔧 **Lab 02** | [Data Preprocessing](labs/lab02/) | Noise removal and trace editing | 🟢 Beginner |
-| 📐 **Lab 03** | [Geometry Setup](labs/lab03/) | Survey geometry and coordinate systems | 🟡 Intermediate |
-| ⚡ **Lab 04** | [Deconvolution](labs/lab04/) | Predictive and spiking deconvolution | 🟡 Intermediate |
-| 📊 **Lab 05** | [Velocity Analysis](labs/lab05/) | Semblance analysis and velocity picking | 🟡 Intermediate |
-| 🎯 **Lab 06** | [NMO Correction](labs/lab06/) | Normal moveout correction and stretch muting | 🟡 Intermediate |
-| 🔄 **Lab 07** | [Stacking](labs/lab07/) | CMP stacking and stack enhancement | 🟡 Intermediate |
-| 🌊 **Lab 08** | [Migration](labs/lab08/) | Time and depth migration techniques | 🔴 Advanced |
-| 📈 **Lab 09** | [Amplitude Analysis](labs/lab09/) | AVO analysis and attribute extraction | 🔴 Advanced |
-| 🎨 **Lab 10** | [Advanced Visualization](labs/lab10/) | Publication-quality plots and presentations | 🟡 Intermediate |
+| 📊 **Lab 01** | [Data Import & Visualization](Lab/lab01/) | Loading SEG-Y data and basic visualization | 🟢 Beginner |
+| 🔧 **Lab 02** | [Data Preprocessing](Lab/lab02/) | Noise removal and trace editing | 🟢 Beginner |
+| 📐 **Lab 03** | [Geometry Setup](Lab/lab03/) | Survey geometry and coordinate systems | 🟡 Intermediate |
+| ⚡ **Lab 04** | [Deconvolution](Lab/lab04/) | Predictive and spiking deconvolution | 🟡 Intermediate |
+| 📊 **Lab 05** | [Velocity Analysis](Lab/lab05/) | Semblance analysis and velocity picking | 🟡 Intermediate |
+| 🎯 **Lab 06** | [NMO Correction](Lab/lab06/) | Normal moveout correction and stretch muting | 🟡 Intermediate |
+| 🔄 **Lab 07** | [Stacking](Lab/lab07/) | CMP stacking and stack enhancement | 🟡 Intermediate |
+| 🌊 **Lab 08** | [Migration](Lab/lab08/) | Time and depth migration techniques | 🔴 Advanced |
+| 📈 **Lab 09** | [Amplitude Analysis](Lab/lab09/) | AVO analysis and attribute extraction | 🔴 Advanced |
+| 🎨 **Lab 10** | [Advanced Visualization](Lab/lab10/) | Publication-quality plots and presentations | 🟡 Intermediate |
 
 ### 🗂️ Lab Structure
 Each lab directory contains:
@@ -239,13 +282,13 @@ Each lab directory contains:
 ## 🗂️ Repository Structure
 
 ```
-seismic-unix-lab/
+Seismic-Unix/
 │
-├── 📜 README.md                    # This file
-├── 🛠️ install_seismic_unix.sh      # Enhanced installation script
+├── 📜 README.md                    # This documentation file
 ├── 📝 LICENSE                      # MIT License
+├── 🛠️ su_installation_script.sh    # Enhanced installation script
 │
-├── 📚 labs/                        # Lab assignments
+├── 📚 Lab/                         # Lab assignments directory
 │   ├── lab01_data_import/
 │   ├── lab02_preprocessing/
 │   ├── lab03_geometry/
@@ -257,30 +300,23 @@ seismic-unix-lab/
 │   ├── lab09_amplitude_analysis/
 │   └── lab10_visualization/
 │
-├── 🔧 scripts/                     # Utility scripts
-│   ├── utilities/
-│   ├── plotting/
-│   └── workflows/
-│
-├── 📊 data/                        # Sample datasets
-│   ├── synthetic/
-│   ├── field/
-│   └── examples/
-│
-├── 📖 docs/                        # Documentation
-│   ├── installation.md
-│   ├── troubleshooting.md
-│   ├── best_practices.md
-│   └── api_reference.md
-│
-├── 🖼️ results/                     # Example outputs
+├── 🖼️ Results/                     # Example outputs and results
 │   ├── figures/
+│   ├── processed_data/
 │   └── reports/
 │
-└── 🧪 tests/                       # Test scripts
-    ├── unit_tests/
-    └── integration_tests/
+└── 📦 installation_file/           # Pre-built installation files
+    ├── seismic_unix_prebuilt.zip   # Compiled binaries (if script fails)
+    ├── dependencies/               # Additional dependencies
+    └── patches/                    # System-specific patches
 ```
+
+### 📁 Directory Details
+
+- **`Lab/`** - Complete lab assignments with step-by-step tutorials
+- **`Results/`** - Sample outputs, figures, and processing results
+- **`installation_file/`** - Alternative installation method with pre-compiled files
+- **`su_installation_script.sh`** - Main automated installation script
 
 ---
 
@@ -355,6 +391,31 @@ suximage < migrated_section.su \
 ### Common Issues and Solutions
 
 <details>
+<summary>🚫 <strong>Installation script fails or doesn't work</strong></summary>
+
+**Problem**: Installation script encounters errors or fails to complete
+
+**Solution**: Use the alternative installation method
+```bash
+# Navigate to installation files
+cd installation_file
+
+# Extract the pre-built installation files
+unzip seismic_unix_prebuilt.zip -d ~/SeismicUnix
+
+# Set up environment manually
+export CWPROOT="$HOME/SeismicUnix"
+export PATH="$PATH:$CWPROOT/bin"
+echo "export CWPROOT='$HOME/SeismicUnix'" >> ~/.bashrc
+echo 'export PATH="$PATH:$CWPROOT/bin"' >> ~/.bashrc
+source ~/.bashrc
+
+# Test installation
+suplane | suximage title="Installation Test" &
+```
+</details>
+
+<details>
 <summary>🚫 <strong>Installation fails with "command not found" errors</strong></summary>
 
 **Problem**: Missing system dependencies
@@ -368,7 +429,7 @@ sudo apt update
 sudo apt install -y build-essential wget curl
 
 # Re-run the installation script
-./install_seismic_unix.sh
+./su_installation_script.sh
 ```
 </details>
 
@@ -463,7 +524,7 @@ gdb suplane
 
 If you encounter issues not covered above:
 
-1. 📖 **Check the documentation**: Browse the `docs/` directory
+1. 📖 **Check the documentation**: Browse the `Lab/` directory for specific examples
 2. 🔍 **Search existing issues**: Look through repository issues
 3. 📧 **Create a new issue**: Provide detailed error messages and system info
 4. 💬 **Community support**: Join seismic processing forums
@@ -474,11 +535,10 @@ If you encounter issues not covered above:
 
 ### 📚 Additional Resources
 
-- 📘 **[Installation Guide](docs/installation.md)** - Detailed installation instructions
-- 🔧 **[Troubleshooting Guide](docs/troubleshooting.md)** - Common problems and solutions  
-- 🎯 **[Best Practices](docs/best_practices.md)** - Seismic processing workflows
-- 📖 **[API Reference](docs/api_reference.md)** - Seismic Unix command reference
-- 🎓 **[Learning Path](docs/learning_path.md)** - Structured learning progression
+- 📘 **[Installation Guide](installation_file/)** - Alternative installation methods
+- 🔧 **[Troubleshooting Guide](#-troubleshooting)** - Common problems and solutions  
+- 🎯 **[Lab Assignments](Lab/)** - Step-by-step processing tutorials
+- 📖 **[Results Examples](Results/)** - Sample outputs and visualizations
 
 ### 🔗 External Resources
 
@@ -531,6 +591,7 @@ We welcome contributions from the seismic processing community! Here's how you c
 - 💾 **Backup System**: Automatic configuration backups
 - 🐚 **Multi-Shell Support**: Works with bash, zsh, and fish
 - 📚 **Extended Documentation**: Comprehensive guides and tutorials
+- 📦 **Alternative Installation**: Added pre-built installation files option
 
 ### Version 1.0.0
 - 🚀 **Initial Release**: Basic installation functionality
@@ -548,6 +609,8 @@ We welcome contributions from the seismic processing community! Here's how you c
 - Support for multiple shell environments
 - Enhanced error reporting with suggested solutions
 - System compatibility validation
+- Alternative installation method using pre-built files
+- Updated repository structure with Lab and Results directories
 
 **Improved:**
 - Installation script reliability and robustness
@@ -570,7 +633,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2024 [Your Name]
+Copyright (c) 2024 Ashraf-ISM
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -587,7 +650,7 @@ copies or substantial portions of the Software.
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**Ashraf-ISM**
 - 🐙 GitHub: [@Ashraf-ISM](https://github.com/Ashraf-ISM/)
 - 📧 Email: 23mc0049@iitism.ac.in
 - 🎓 Institution: IIT (ISM) Dhanbad
